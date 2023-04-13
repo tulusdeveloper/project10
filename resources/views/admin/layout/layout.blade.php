@@ -48,6 +48,7 @@
 <script src="{{ url('admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ url('admin/js/adminlte.js') }}"></script>
+<script src="{{ asset('admin/js/adminlte.min.js') }}"></script>
 
 <!-- PAGE plugins -->
 <!-- jQuery Mapael -->
