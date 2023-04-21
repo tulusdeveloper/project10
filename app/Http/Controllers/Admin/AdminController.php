@@ -49,6 +49,12 @@ class AdminController extends Controller
             $data = $request->all();
             // Check if password is correct
             if(Hash::check($data['current_pwd'],Auth::guard('admin')->user()->password)){
+            // Check if New password and Confirm password matches
+            if($data['new_pwd'] == $data['confirm_pwd']){
+
+            }else{
+                return redirect()->back()->with('error_message','Your New Password and Confirm New password do not match!');
+            }
 
             }else{
                 return redirect()->back()->with('error_message','Your current password is incorrect!');
